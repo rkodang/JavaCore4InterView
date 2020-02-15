@@ -40,6 +40,7 @@ public class QueueContainer<T> {
         Object FirstElement = array[0];
         System.arraycopy(array,1,array,0,size-1);
         size--;
+        array[size]=null;
         return (T) FirstElement;
     }
 
