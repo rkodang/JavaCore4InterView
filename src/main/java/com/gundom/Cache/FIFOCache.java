@@ -1,5 +1,6 @@
 package com.gundom.Cache;
 
+import java.util.Deque;
 import java.util.LinkedList;
 
 /**
@@ -8,7 +9,10 @@ import java.util.LinkedList;
 public class FIFOCache implements Cache {
 
     private Cache cache;
-    private LinkedList<Object> keyOrderList;
+    /**
+     * 以此对象来存储入队列顺序
+     */
+    private Deque<Object> keyOrderList;
     private int maxCap;
 
 
