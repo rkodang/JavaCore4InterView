@@ -13,6 +13,7 @@ public class FIFOCache implements Cache {
      * 以此对象来存储入队列顺序
      */
     private Deque<Object> keyOrderList;
+    /**最大容量*/
     private int maxCap;
 
 
@@ -30,6 +31,7 @@ public class FIFOCache implements Cache {
             Object oldKey = keyOrderList.removeFirst();
             cache.removeObject(oldKey);
         }
+        cache.putObejct(key,value);
     }
 
     @Override
