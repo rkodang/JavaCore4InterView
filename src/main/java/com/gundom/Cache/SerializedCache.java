@@ -16,7 +16,29 @@ public class SerializedCache implements Cache{
         ObjectInputStream objectInputStream = new ObjectInputStream(new ByteArrayInputStream(array));
         objectInputStream.close();
         return objectInputStream.readObject();
+
     }
+    //反序列化
+    public Object deSerializable2Object(byte[] array){
+        //获取字节流对象
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(array);
+        //创建字节输入流
+        ObjectInputStream objectInputStream = null;
+        Object objectResult=null;
+        try {
+             objectInputStream=new ObjectInputStream(byteArrayInputStream);
+             objectResult = objectInputStream.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("字节输入流创建失败");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("反序列化失败咯");
+        }
+
+        return objectResult==null?null:objectResult;
+    }
+
     //序列化
     private byte[] serialize(Object value) throws Exception {
         //字节数组输出流,内置一个可扩容的数组
@@ -25,6 +47,7 @@ public class SerializedCache implements Cache{
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
         //2.基于流对象进行序列化
         objectOutputStream.writeObject(value);
+        //冲刷
         objectOutputStream.flush();
         //3.获取自己数组然后范围;
         byte[] bytes = byteArrayOutputStream.toByteArray();
