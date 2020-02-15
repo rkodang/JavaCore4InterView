@@ -19,7 +19,7 @@ public class LruCache implements Cache {
             protected boolean removeEldestEntry(Map.Entry<Object, Object> eldest) {
                 boolean tooBig=size()>size;
                 if (tooBig) {
-                    eldestKey=eldest.getKey();
+                    eldestKey=eldest.getKey();//获取map中第一个元素()
                 }
 
                 return tooBig;
@@ -43,12 +43,13 @@ public class LruCache implements Cache {
 
     @Override
     public Object getObject(Object key) {
-        keymap.get(key);
+        keymap.get(key);//用于改变keymap内部排序的顺序;将get到的key往最后塞;
         return cache.getObject(key);
     }
 
     @Override
     public Object removeObject(Object key) {
+            keymap.remove(key);
         return cache.removeObject(key);
     }
 
