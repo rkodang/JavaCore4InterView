@@ -54,8 +54,7 @@ public class LogCache implements Cache {
         logCache.putObejct("C",500);
         logCache.putObejct("L",800);
         System.out.println(logCache);
-        Object l = logCache.getObject("A");
-        System.out.println(l);
+        logCache.getObject("A");
         logCache.getObject("L");
     }
 }
