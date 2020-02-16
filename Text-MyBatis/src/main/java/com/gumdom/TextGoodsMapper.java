@@ -8,7 +8,7 @@ public class TextGoodsMapper extends TestBase {
     @Test
     public void testInsertObject(){
         //1.创建Goods对象
-        long size= (long) Math.random()*5782+20;
+        long size= (long) ((Math.random()*102)*(Math.random()*100));
 
         Goods goods=new Goods();
         goods.setId(size);

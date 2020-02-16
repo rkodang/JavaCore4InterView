@@ -8,4 +8,12 @@
 
 
     </insert>
+    
+    <delete id="deleteObjectByIds">
+        delete form gd_goods where id in
+        <foreach collection="array" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+        /*用in的性能不如or拼接的性能好*/
+    </delete>
 </mapper>
