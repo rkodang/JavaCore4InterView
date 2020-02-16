@@ -1,12 +1,14 @@
 package com.gundom.Cache;
 
+import java.io.IOException;
+
 public interface Cache {
     /**
      * 存数据
      * @param key
      * @param value
      */
-    public void putObejct(Object key, Object value);
+    public void putObejct(Object key, Object value) throws IOException;
 
     /**
      * 取数据
