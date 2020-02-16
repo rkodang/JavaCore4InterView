@@ -3,6 +3,7 @@ package com.gundom.Serializable;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Base64;
 
 class Replay implements Serializable{
 
@@ -25,6 +26,32 @@ class Replay implements Serializable{
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    private void writeObject(ObjectOutputStream objcet)throws IOException{
+        //1.对数据加密
+        //2.获取加密对象
+        Base64.Encoder encoder = Base64.getEncoder();
+        //3.执行加密操作
+        byte[] encodeBytes=encoder.encode(Content.getBytes());
+        Content=new String(encodeBytes);
+        //4.对数据进行默认序列化
+        objcet.defaultWriteObject();
+        objcet.close();
+    }
+
+    private void readObject(ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {
+        //1.对内容进行反序列化
+        objectInputStream.defaultReadObject();
+        //2.对内容进行解密操作
+        //3.获取解密对象
+        Base64.Decoder decoder = Base64.getDecoder();
+        //4.执行解密操作
+        byte[] decode = decoder.decode(Content.getBytes());
+
+        Content=new String(decode);
+        objectInputStream.close();
+
     }
 
     @Override
