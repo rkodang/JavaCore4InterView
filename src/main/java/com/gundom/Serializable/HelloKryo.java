@@ -28,6 +28,11 @@ public class HelloKryo {
         Message object2 = kryo.readObject(input, Message.class);
         input.close();
         System.out.println(object2);
+
+        byte[] hellos = KryoUtils.serialzable("hello Utils");
+        System.out.println(hellos.toString());
+        Object deserializable = KryoUtils.deserializable(hellos);
+        System.out.println(deserializable);
     }
     static public class Message{
         String value;
