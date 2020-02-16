@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gumdom.Dao.GoodMapper">
+    <insert id="insertObject" parameterType="com.gumdom.Pojo.Goods">
+        insert into gd_goods (id,name,remark,createdTime) values (#{id},#{name},#{remark},now())
+
+
+    </insert>
+</mapper>

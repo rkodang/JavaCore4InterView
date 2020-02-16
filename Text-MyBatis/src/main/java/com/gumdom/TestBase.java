@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.sql.Connection;
 
 public class TestBase {
-    private SqlSessionFactory build;
+    protected SqlSessionFactory build;
 
     @Before
     public void init() throws IOException {
