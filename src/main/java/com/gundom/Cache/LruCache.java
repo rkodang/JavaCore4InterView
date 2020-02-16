@@ -1,5 +1,6 @@
 package com.gundom.Cache;
 
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -28,7 +29,7 @@ public class LruCache implements Cache {
     }
 
     @Override
-    public void putObejct(Object key, Object value) {
+    public void putObejct(Object key, Object value) throws IOException {
         cache.putObejct(key, value);
         removeOldObject(key);
     }
@@ -61,7 +62,7 @@ public class LruCache implements Cache {
                 '}';
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         LruCache cache=new LruCache(new PerpetualCache());
         cache.putObejct("A",100);
         cache.putObejct("B",300);

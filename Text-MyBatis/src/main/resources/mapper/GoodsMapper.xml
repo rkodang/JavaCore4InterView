@@ -16,4 +16,14 @@
         </foreach>
         /*用in的性能不如or拼接的性能好*/
     </delete>
+    K
+    <delete id="deleteObjectByIDS">
+        delete form gd_goods
+        <where>
+            <foreach collection="array" item="id">
+                or id=#{id}
+            </foreach>
+        </where>
+        /*用in的性能不如or拼接的性能好*/
+    </delete>
 </mapper>

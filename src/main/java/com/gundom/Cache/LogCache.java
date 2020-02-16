@@ -1,5 +1,7 @@
 package com.gundom.Cache;
 
+import java.io.IOException;
+
 /**
  * 要在Cache的基础上添加日志操作
  *  --记录元素的命中率(命中次数/请求次数)
@@ -15,7 +17,7 @@ public class LogCache implements Cache {
     }
 
     @Override
-    public void putObejct(Object key, Object value) {
+    public void putObejct(Object key, Object value) throws IOException {
         cache.putObejct(key, value);
     }
 
@@ -46,7 +48,7 @@ public class LogCache implements Cache {
                 '}';
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         LogCache logCache = new LogCache(new FIFOCache(3, new PerpetualCache()));
 
         logCache.putObejct("A",100);
