@@ -1,5 +1,6 @@
 package com.gundom.Cache;
 
+import java.io.IOException;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -24,7 +25,7 @@ public class FIFOCache implements Cache {
     }
 
     @Override
-    public void putObejct(Object key, Object value) {
+    public void putObejct(Object key, Object value) throws IOException {
         keyOrderList.addLast(key);
 
         if (keyOrderList.size()>maxCap){
@@ -53,7 +54,7 @@ public class FIFOCache implements Cache {
                 '}';
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FIFOCache cache=new FIFOCache(3,new PerpetualCache());
                 cache.putObejct("A",1);
                 cache.putObejct("V",2);
