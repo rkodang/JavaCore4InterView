@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CRUDTEXT" />
         <module name="TextMyBatis" />
+        <module name="CRUDTEXT" />
+        <module name="TextSpring" />
       </profile>
     </annotationProcessing>
   </component>
