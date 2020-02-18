@@ -20,6 +20,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User queryByOne() {
-        return new User("李四",2,26);
+        return new User("一号机",2,26);
     }
 }

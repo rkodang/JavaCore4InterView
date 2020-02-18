@@ -11,9 +11,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public User initOrder(String userId) {
-
         return new User("DubboGet",2,5);
     }
+
 
     @Override
     public List<User> queryByRange() {

@@ -11,7 +11,7 @@ import java.util.List;
 
 @Controller
 public class UserController {
-    @Reference
+ @Reference
     OrderService orderService;
     @ResponseBody
     @RequestMapping("/dubboUser")
