@@ -9,6 +9,7 @@
         <module name="Dubbo-OrderService-Consumer" />
         <module name="TextMyBatis" />
         <module name="TextSpring" />
+        <module name="Dubbo-UserService-Provider02" />
         <module name="Dubbo-UserService-Provider01" />
         <module name="CRUDTEXT" />
         <module name="Dubbo-Interface" />
@@ -21,6 +22,7 @@
       <module name="Dubbo-Interface" options="-parameters" />
       <module name="Dubbo-OrderService-Consumer" options="-parameters" />
       <module name="Dubbo-UserService-Provider01" options="-parameters" />
+      <module name="Dubbo-UserService-Provider02" options="-parameters" />
     </option>
   </component>
 </project>
