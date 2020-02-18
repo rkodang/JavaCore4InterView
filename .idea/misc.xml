@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/CRUDTEXT/pom.xml" />
+        <option value="$PROJECT_DIR$/Dubbo-UserService-Provider01/pom.xml" />
+        <option value="$PROJECT_DIR$/Dubbo-OrderService-Consumer/pom.xml" />
       </list>
     </option>
   </component>
