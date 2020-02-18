@@ -2,6 +2,7 @@ package com.gundom.cls;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.LinkedHashSet;
 
 class ObjectFactory{
     public static Object newInstances(Class<?> cls) throws IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException {
@@ -45,5 +46,11 @@ public class TestClassObject {
         Class<?> classBBClass = ClassBB.class;
         Object classBB2Object = ObjectFactory.newInstances(classBBClass,new Class[]{int.class},new Object[]{50});
         System.out.println(classBB2Object);
+
+
+        LinkedHashSet<String> linkedHashSet=new LinkedHashSet<String>();
+        linkedHashSet.add("haha");
+        linkedHashSet.add("haha5");
+        System.out.println(linkedHashSet);
     }
 }
