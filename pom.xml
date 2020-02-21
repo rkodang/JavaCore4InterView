@@ -12,6 +12,7 @@
         <module>Text-MyBatis</module>
         <module>Text-Spring</module>
       <module>Dubbo-UserService-Provider02</module>
+      <module>Text-ThreadPool</module>
     </modules>
 
     <name>JavaCore</name>
