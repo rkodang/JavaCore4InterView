@@ -50,7 +50,7 @@ public class TestThreadPool {
                 target.run();
             } finally {
                 int c = counter.getAndDecrement();
-                System.out.println("terminate no " + c + " Threads");
+                System.out.println("terminate no: " + c + " Threads");
             }
         }
 
@@ -61,7 +61,7 @@ public class TestThreadPool {
     {
         @Override
         public void run() {
-            System.out.println("complete a task");
+            System.out.println("complete a task~");
         }
 
     }
@@ -74,7 +74,7 @@ public class TestThreadPool {
         public Thread newThread(Runnable r)
         {
             int c = atomicInteger.incrementAndGet();
-            System.out.println("create no " + c + " Threads");
+            System.out.println("create no: " + c + " Threads");
             return new WorkThread(r, atomicInteger);//通过计数器，可以更好的管理线程
         }
 
