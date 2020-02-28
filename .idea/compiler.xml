@@ -24,6 +24,7 @@
       <module name="Dubbo-OrderService-Consumer" options="-parameters" />
       <module name="Dubbo-UserService-Provider01" options="-parameters" />
       <module name="Dubbo-UserService-Provider02" options="-parameters" />
+      <module name="Text-ThreadPool" options="-parameters" />
     </option>
   </component>
 </project>
