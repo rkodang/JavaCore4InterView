@@ -7,6 +7,7 @@ public class InnerClassText01 {
 
     public class Inner{
         public InnerClassText01 outer(){
+            //返回的是一个InnerClassText01对象
             return InnerClassText01.this;
         }
     }
