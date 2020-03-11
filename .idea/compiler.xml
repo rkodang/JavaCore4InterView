@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Dubbo-OrderService-Consumer" />
         <module name="TextMyBatis" />
+        <module name="OnJava8" />
         <module name="Text-ThreadPool" />
         <module name="TextSpring" />
         <module name="Dubbo-UserService-Provider02" />

@@ -13,6 +13,7 @@
         <module>Text-Spring</module>
       <module>Dubbo-UserService-Provider02</module>
       <module>Text-ThreadPool</module>
+        <module>OnJava8</module>
     </modules>
 
     <name>JavaCore</name>
