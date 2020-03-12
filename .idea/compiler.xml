@@ -9,12 +9,12 @@
         <module name="Dubbo-OrderService-Consumer" />
         <module name="TextMyBatis" />
         <module name="OnJava8" />
-        <module name="Text-ThreadPool" />
         <module name="TextSpring" />
         <module name="Dubbo-UserService-Provider02" />
         <module name="Dubbo-UserService-Provider01" />
         <module name="CRUDTEXT" />
         <module name="Dubbo-Interface" />
+        <module name="Text-ThreadPool" />
       </profile>
     </annotationProcessing>
   </component>
