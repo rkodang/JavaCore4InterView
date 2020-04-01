@@ -1,0 +1,31 @@
+server:
+    port: 8090
+    servlet:
+        context-path: /
+
+
+spring:
+    datasource:
+
+    #\u5F15\u5165druid\u6570\u636E\u6E90
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/mybatisplus?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+        username: root
+        password: rkodang
+    devtools:
+        restart:
+            enabled: true
+            additional-paths: src/main/*
+
+#spring\u6574\u5408Mybatis
+mybatis-plus:
+#\u5B9A\u4E49\u522B\u540D\u5305
+    type-aliases-package: com.gumdom.pojo
+    mapper-locations: classpath:/mybatis/mappers/*.xml
+#\u5F00\u542F\u9A7C\u5CF0\u6620\u5C04
+    configuration:
+        map-underscore-to-camel-case: true
+logging:
+    level:
+        com.gumdom.mapper: debug
