@@ -14,6 +14,7 @@
       <module>Dubbo-UserService-Provider02</module>
       <module>Text-ThreadPool</module>
         <module>OnJava8</module>
+        <module>MyBatis-Plus</module>
     </modules>
 
     <name>JavaCore</name>

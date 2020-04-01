@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MyBatisPlus" />
         <module name="Dubbo-OrderService-Consumer" />
         <module name="TextMyBatis" />
         <module name="OnJava8" />
@@ -25,6 +26,7 @@
       <module name="Dubbo-OrderService-Consumer" options="-parameters" />
       <module name="Dubbo-UserService-Provider01" options="-parameters" />
       <module name="Dubbo-UserService-Provider02" options="-parameters" />
+      <module name="MyBatisPlus" options="-parameters" />
       <module name="Text-ThreadPool" options="-parameters" />
     </option>
   </component>
