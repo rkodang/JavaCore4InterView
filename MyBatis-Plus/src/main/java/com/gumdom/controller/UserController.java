@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+/**
+ * GitHub地址：https://github.com/RudeCrab/rude-java/tree/master/project-practice/validation-and-exception-handler
+ */
+
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
