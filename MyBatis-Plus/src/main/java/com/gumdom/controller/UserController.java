@@ -1,20 +1,23 @@
 package com.gumdom.controller;
 
 import com.gumdom.pojo.NewUser;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 
-    @PostMapping("/addUser")
+    /**
+     * 这个方法带有valid验证
+     * @param user
+     * @return success
+     */
+    @PostMapping("/adduser")
     public String addUser(@RequestBody @Valid NewUser user){
-
+        System.out.println(user);
+        System.out.println("adduser");
         return "success";
     }
 }
